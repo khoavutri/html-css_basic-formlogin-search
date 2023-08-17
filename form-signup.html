@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>number two</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+        body {
+            background-image: url("https://img2.thuthuatphanmem.vn/uploads/2018/11/17/phong-canh-anime-cuc-dep_112650889.jpg");
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .header {
+            
+            display: flex;
+            width: 50vw;
+            margin-top: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
+        .header_icon--img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header_icon, .header_icon--button {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .header_icon--button {
+            background-color: #1261fa;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            height: 30px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .above {
+            margin-top: 8vh;
+            display: flex;
+            width: 50vw;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        h1 {
+            color: #1261fa;
+        }
+        .form {
+            margin-top: 10px;
+            background-color: white;
+            width: 25vw;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        input {
+            border: none;
+            border-bottom: #cbd4d5 solid 0.1px;
+            outline: none;
+            width: 100%;
+            height: 45px;
+            margin: 10px 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        #myCheckbox {
+            height: 15px;
+            width: 15px;
+            margin-right: 10px;
+        }
+        label {
+            font-size: 13px;
+        }
+        .button_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .button_join {
+            border: none;
+            background-color: #1261fa;
+            color: white;
+            border-radius: 10px;
+            width: 25vw;
+            height: 40px;
+            cursor: pointer;
+        }
+        .kkk{
+            display: flex;
+            align-items: left;
+            width: 100%;
+            margin-top: -10px;
+        }
+        h1+p{
+            margin-top: 5vh;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        a:hover{
+            padding-bottom: 10px;
+        }
+        .start{
+            text-decoration: underline;
+            text-decoration-color: #1261fa;
+        }
+       
+    </style>
+    <script>
+        function onloadd(n) {
+            const aray = ["a1", "a2", "a3", "a4", "a5"];
+            for (let i = 0; i <= 4; i++) {
+                if (i !== n) {
+                    document.getElementById(aray[i]).style.textDecoration = "none"; 
+                } else {
+                    document.getElementById(aray[i]).style.textDecoration = "underline"; 
+                    document.getElementById(aray[i]).style.textDecorationColor = "#1261fa";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_1280.jpg" alt="ảnh" class="header_icon--img">
+        <a href="#" class="header_icon start" id="a1" onclick="onloadd(0)">Home</a>
+        <a href="#" class="header_icon" id="a2" onclick="onloadd(1)">About</a>
+        <a href="#" class="header_icon" id="a3" onclick="onloadd(2)">Schedule</a>
+        <a href="#" class="header_icon" id="a4" onclick="onloadd(3)">Blog</a>
+        <a href="#" class="header_icon" id="a5" onclick="onloadd(4)">Contact</a>
+        <button class="header_icon header_icon--button">Buy
+            <img src="https://icons.iconarchive.com/icons/double-j-design/diagram-v2/16/shopping-cart-icon.png" width="16" height="16">
+        </button>
+    </div>
+
+    <div class="above">
+        <h1>HAPPY BIRTHDAY TO HITCLUB</h1>
+        <p><img src="https://icons.iconarchive.com/icons/iconsmind/outline/16/Calendar-4-icon.png" width="16" height="16"> 18/08/2010 - 18/08/2023</p>
+    </div>
+
+    <form action="" class="form">
+        <h2>Join Conference</h2>
+        <div class="input_mou">
+            <input type="text" placeholder="Enter your Name">
+            <input type="email" placeholder="Enter your Email">
+            <input type="tel" placeholder="Enter your Phone">
+        </div>
+        <div class="kkk">
+            <div class="checkbox-container">
+                <input type="checkbox" id="myCheckbox">
+                <label for="myCheckbox">Chọn mục này để đồng ý điều khoản</label>
+            </div>
+        </div>
+        
+        <div class="button_div">
+            <button class="button_join">Join now</button>
+        </div>
+    </form>
+</body>
+</html>
