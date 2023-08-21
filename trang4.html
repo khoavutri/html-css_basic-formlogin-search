@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>number two</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;    
+        }
+       .Header{
+            width: 100vw;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            position: fixed;
+            background-color: white;
+       }
+       .Header_1{
+            align-items: center;
+            margin-left: 50px;
+            margin-top: 5px;
+       }
+       .Header_2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+       }
+       .Header_3{
+            margin-top: 16px;
+            margin-right: 50px;
+       }
+       .image2{
+            align-items: center;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            margin-top: 10px;
+       }
+       .banner{
+            height: 640px;
+            width: 100vw;
+            margin-bottom: 0;
+            background-image: red;
+       }
+       a{
+            color: black;
+            text-decoration: none;
+       }
+       a+a{
+            margin-left: 20px;
+       }
+       .Content{
+            margin-top: 0;
+       }
+       h2{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+       }
+       .Content_1{
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+       }
+
+       .Content_1--icon{
+            display: flex;
+            border-radius: 15px;
+            min-height: 100px;
+            min-width: 150px;
+            border: solid #ff0000;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            padding-right: 10PX;
+       }
+       .Content_1+.Content_1{
+            margin-top: 40px;
+       }
+       .Content_1--icon+.Content_1--icon{
+            margin-left: 40px;
+            display: flex;
+       }
+       
+       .Content_1--icon_img{
+            height: 72px;
+            width: 72px;
+       }
+       .Content_1--icon:hover{
+            opacity: 0.8;
+            cursor: pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+       }
+       .Content_2{
+            display: flex;
+            margin: 40px 8vw;
+            flex-direction: row;
+            height: 400px;
+          
+       }
+
+       .Content_3{
+            display: flex;
+            margin: 40px 8vw;
+            
+            flex-direction: row-reverse;
+       }
+       .Content_x--img{
+            height: 400px;
+            width: 400px;
+            
+       }
+       .Footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f06c25;
+            height: 280px;
+            width: 100vw;
+            color: #ffffff;
+        
+       }
+
+        .line {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .line hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid white;
+            margin: 0;
+        }
+       a:hover{
+            opacity: 0.8;
+       }
+       .start{
+            color:#f06c25;
+       }
+       .mu:hover{
+            opacity: 0.8;
+            cursor: pointer;
+       }
+       #formm{
+            display: none;
+       }
+       .button_none{
+            background-color: #ffffff;
+            border: none;
+       }
+       .input_none{
+            padding-left: 10px;
+            border-radius: 10px;
+            height: 20px;
+            margin-top: 10px;
+            border-color: gray !important;
+            outline: none;
+       }
+       .button_none:hover{
+            cursor: pointer;
+       }
+    </style>
+    <script>
+        const change = (a) => {
+            const b = ["a1","a2","a3","a4","aa"];
+            for (let i=0;i<5;i++){
+                if (i==a){
+                    document.getElementById(b[i]).style.color="#f06c25";
+                } else {
+                    document.getElementById(b[i]).style.color="black";
+                }
+            }
+        }
+        function search(){
+            document.getElementById("qqq").style.display = "none";
+            document.getElementById("formm").style.display = "block";
+        }
+        function inSearch(){
+            document.getElementById("qqq").style.display = "block";
+            document.getElementById("formm").style.display = "none";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="Header">
+        <div class="Header_1">
+            <a href="https://www.facebook.com/khoa.tri.365.org">
+                <img class="image2" src="https://th.bing.com/th/id/OIP.3rHUqlGiEMZE0BcDeyNCBwHaEK?pid=ImgDet&w=1920&h=1080&rs=1" alt="d">
+            </a>
+        </div>
+        <div class="Header_2">
+            <a href="#" class="start" onclick="change(0)" id="a1" >Home</a>
+            <a href="#" onclick="change(1)" id="a2" >About us</a>
+            <a href="#" onclick="change(2)" id="a3" >Blog</a>
+            <a href="#" onclick="change(3)" id="a4" >Menu</a>
+            <a href="#" onclick="change(4)" id="aa" >Contact</a>
+        </div>
+        <div class="Header_3" id="sss" onmouseover="search()" onmouseout="inSearch()">
+            <img src="https://icons.iconarchive.com/icons/dtafalonso/modern-xp/32/ModernXP-20-Seach-icon.png"
+             width="32" height="32" class="mu" id="qqq" >
+             <form action="" id="formm">
+                <input type="text" class="input_none" placeholder="Search for what you want">
+                <button class="button_none"><img src="https://icons.iconarchive.com/icons/github/octicons/16/search-24-icon.png" width="16" height="16"></button>
+             </form>
+        </div>
+        
+    </div>
+
+    <div><img class="banner" src="https://phunugioi.com/wp-content/uploads/2021/11/hinh-anh-chill-lofi-tam-trang-buon-nhat.jpg" alt="khoa vip"></div>
+
+    <div class="Content">
+        <h2>DANH SÁCH CÁC LỚP HỌC PUBLIC CỦA HIT NĂM 2023</h2>
+        <div class="Content_1">
+            <div class="Content_1--icon">
+                <img src="https://th.bing.com/th/id/OIP.C66JBOEarlIEh9k646Ki9AHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="HTML" class="Content_1--icon_img">
+                <div>
+                    <h3>LỚP WEB</h3>
+                    <p>Thời gian: 6h-8h</p>
+                    <p>Thứ: 2</p>
+                </div>
+            </div>
+
+            <div class="Content_1--icon">
+                <img src="https://codeprogramming.org/wp-content/uploads/2022/01/C-Logo.wine_.png" alt="C++" class="Content_1--icon_img">
+                <div>
+                    <h3>LỚP OOP</h3>
+                    <p>Thời gian: 6h-8h</p>
+                    <p>Thứ: 3, 5, 6, 7</p>
+                </div>
+            </div>
+
+            <div class="Content_1--icon">
+                <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/72/python-icon.png" width="72" height="72">
+                <div>
+                    <h3>LỚP PYTHON</h3>
+                    <p>Thời gian: 6h-8h</p>
+                    <p>Thứ: 3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Content_1">
+             <div class="Content_1--icon">
+                <img src="https://icons.iconarchive.com/icons/untergunter/leaf-mimes/72/text-x-java-icon.png" width="72" height="72">
+                <div>
+                    <h3>LỚP JAVA</h3>
+                    <p>Thời gian: 6h-8h</p>
+                    <p>Thứ: 4</p>
+                </div>
+            </div>
+
+             <div class="Content_1--icon">
+                <img src="https://icons.iconarchive.com/icons/graphics-vibe/developer/72/photoshop-icon.png" width="72" height="72">
+                 <div>
+                    <h3>LỚP ĐỒ HỌA CƠ BẢN</h3>
+                    <p>Thời gian: 6h-8h</p>
+                    <p>Thứ: Chủ Nhật</p>
+                </div>
+            </div>
+
+        </div>
+        <h2 style="margin-top: 40px;">SỰ KIÊN CỦA HIT</h2>
+        <div>
+            <div class="Content_2">
+                <img src="https://quotetheanime.com/wp-content/uploads/2021/01/Gojo-768x768.jpg" alt="gojo" class="Content_x--img" style="border-radius: 10px;">
+                 <div style="margin-left: 40px;">
+                    <h3>
+                        &#x1F382;
+                        SINH NHẬT TUỔI 13 CLB TIN HỌC HIT 
+                        &#x1F382;
+                    </h3>
+                    <p style="margin-top: 35px; margin-bottom: 12px;">
+                        <img src="https://icons.iconarchive.com/icons/vcferreira/firefox-os/16/clock-icon.png" width="16" height="16">
+                        18/08/2010-18/08/2023
+                        <img src="https://icons.iconarchive.com/icons/vcferreira/firefox-os/16/clock-icon.png" width="16" height="16">
+                    </p>
+                    <h4 style="font-weight: normal;">
+                        <img src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-3d/16/Fish-Cake-With-Swirl-3d-icon.png" width="16" height="16">
+                        13 NĂM KẾT SỨC MẠNH, NỐI THÀNH CÔNG
+                        <img src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-3d/16/Fish-Cake-With-Swirl-3d-icon.png" width="16" height="16">
+                    </h4>
+                    <p style="margin-top: 15px;line-height: 2;font-size: 15px;">
+                        &#x1F365;Trường em đang học gồm có 5 dãy nhà, gồm có 4 dãy phòng học và một dãy dành cho Ban Giám hiệu nhà trường. 
+                        Ngoài ra,&#x1F44D; trường em đang học cũng có một khoảng sân rất rộng lớn với những hàng cây mới trồng những cũng đã khá lớn. 
+                        Em mong sao cây lớn thật nhanh để có thể che bóng mát cho chúng em những giờ ra chơi. 
+                        Cột cờ của trường em đang học nằm ở sân trường, &#x23F0;nơi lá cờ tổ quốc tung bay trong gió.
+                        Chúng em đều được làm lễ chào cờ vào mỗi sáng thứ hai mỗi tuần.
+                        Vì là ngôi trường mới&#x1F4B0; nên các phòng học và các vật dụng đều mới tinh, 
+                        sạch sẽ thơm mùi gỗ mới… Em và các bạn luôn luôn ý thức không vẽ bậy trên tường, 
+                        xả rác và luôn giữ gìn trường học sạch đẹp như bây giờ. Đến ngôi trường của em đang học, 
+                        cô giáo dạy chúng em những điều hay, khám phá nhiều điều mới lạ. 
+                        Cô giáo dặn chúng &#x1F60D;em phải luôn chấp hành 
+                        Em mong sao cây lớn thật nhanh để có thể che bóng mát cho chúng em những giờ ra chơi. 
+                        Cột cờ của trường em đang học nằm ở sân trường, nơi lá cờ tổ quốc tung bay trong gió. 
+                        Chúng em đều được làm lễ chào cờ vào mỗi sáng thứ hai mỗi tuần&#x1F4B0;.
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="Content_3">
+                <img src="https://th.bing.com/th/id/OIP.eXGv6QroARkcxQEYwWZjIAHaHu?pid=ImgDet&rs=1" alt="daa" class="Content_x--img">
+                <div style="margin-right: 40px;">
+                    <h3>&#127752 SINH NHẬT VÀ CHÚNG TA SẼ ĐI CÙNG NHAU THẬT XA ĐỂ CHỞ VỀ NHÀ AHIHIHIH 1232424 &#127752</h3>
+                    <p style="margin-top: 40px; line-height: 2;font-size: 15px;">&#x1F6A9;Ngôi trường của em đang học có nhiều bóng mát cây xanh và ghế đá ở sân trường, 
+                        &#x2764;em mến yêu ngôi trường của em và em đến đây để học hằng ngày.
+                        Trường em đang học gồm có 5 dãy nhà, 
+                        gồm có&#x1F44D; 4 dãy phòng học và một dãy dành cho Ban Giám hiệu nhà trường. 
+                        Ngoài ra, trường em đang học cũng có một khoảng sân rất rộng lớn với những hàng cây mới trồng những cũng đã khá lớn. 
+                        Em mong sao cây lớn thật nhanh để có thể che bóng mát cho chúng em những giờ ra chơi. 
+                        Cột cờ của trường em đang học nằm ở sân trường, nơi lá cờ tổ quốc tung bay trong gió. 
+                        Chúng em đều được làm lễ chào cờ vào mỗi sáng thứ hai mỗi tuần.&#x1F680;
+
+                        Vì là ngôi trường mới nên các phòng học và các vật dụng đều mới tinh, sạch sẽ thơm mùi gỗ mới… 
+                        Em và các bạn luôn luôn ý thức&#x1F60D; không vẽ bậy trên tường, xả rác và luôn giữ gìn trường học sạch đẹp như bây giờ. 
+                        Đến ngôi trường của em đang học, cô giáo dạy chúng em những điều hay, khám phá nhiều điều mới lạ. 
+                        Cô giáo dặn chúng em phải luôn chấp hành nội quy của nhà trường, 
+                        và chúng em không xả rác để ngôi trường của em luôn sạch sẽ.
+                        Cô giáo dặn chúng em phải luôn chấp hành nội quy của nhà trường, 
+                        và chúng em không xả rác để ngôi trường của em luôn sạch sẽ.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="Footer">
+        <div class="line" style="margin-top: 40px;">
+            <hr>
+            <a href="https://www.facebook.com/khoa.tri.365.org"><img src="https://th.bing.com/th/id/OIP.3rHUqlGiEMZE0BcDeyNCBwHaEK?pid=ImgDet&w=1920&h=1080&rs=1" alt="a" 
+                style="height: 50px;width: 50px;border-radius: 50%;"></a>
+            <hr>
+        </div>
+        <p style="margin-top: 30px;">Địa chỉ: Tầng 9, A1, Trường đại học Công Nghiệp Hà Nội, Cơ Sở 1</p>
+        <p style="margin-top: 20px;">Facebook: <a href="https://www.facebook.com/khoa.tri.365.org" style="color: white;">https://www.facebook.com/khoa.tri.365.org</a></p>
+        <p style="margin-top: 20px;">Gmail: khoavutri@gmail.com</p>
+    </div>
+</body>
+</html>
